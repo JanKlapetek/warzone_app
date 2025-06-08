@@ -1,3 +1,4 @@
+<!-- loadouts/templates/loadouts/index.html -->
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -11,7 +12,6 @@
         <div>
             <h2>{{ loadout.weapon.name }}</h2>
             <p>Perk: {{ loadout.perk.name }}</p>
-            <p>Příslušenství:</p>
             <ul>
                 {% for attachment in loadout.attachments.all %}
                     <li>{{ attachment.name }}</li>
