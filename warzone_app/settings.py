@@ -64,8 +64,12 @@ WSGI_APPLICATION = 'warzone_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'warzone',
+        'USER': 'koyeb-adm',
+        'PASSWORD': 'RmiEvoMz7a3s',
+        'HOST': 'ep-white-band-a2h03cgc.eu-central-1.pg.koyeb.app',
+        'OPTIONS': {'sslmode': 'require'},
     }
 }
 
