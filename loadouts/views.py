@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .models import Loadout
 
-# Create your views here.
+def loadout_list(request):
+    loadouts = Loadout.objects.all()
+    return render(request, 'loadouts/index.html', {'loadouts': loadouts})
