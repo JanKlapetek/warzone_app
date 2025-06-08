@@ -1,26 +1,11 @@
-<!-- loadouts/templates/loadouts/index.html -->
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <title>Warzone Loadouty</title>
-</head>
-<body>
-    <h1>Seznam Loadoutů</h1>
+<h1>Seznam Loadoutů</h1>
 
-    {% for loadout in loadouts %}
-        <div>
-            <h2>{{ loadout.weapon.name }}</h2>
-            <p>Perk: {{ loadout.perk.name }}</p>
-            <ul>
-                {% for attachment in loadout.attachments.all %}
-                    <li>{{ attachment.name }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        <hr>
-    {% empty %}
-        <p>Žádné loadouty zatím nejsou.</p>
-    {% endfor %}
-</body>
-</html>
+{% if loadouts %}
+    <ul>
+        {% for loadout in loadouts %}
+            <li>{{ loadout.name }} – Zbraň: {{ loadout.weapon.name }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Žádné loadouty zatím nejsou.</p>
+{% endif %}
