@@ -20,6 +20,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'loadouts',
+    'stats',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
